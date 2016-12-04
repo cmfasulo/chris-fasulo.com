@@ -1,5 +1,5 @@
-html { 
-  background: url('../images/blueprint-bw.jpg') no-repeat center center fixed; 
+html {
+  background: url('../images/blueprint-bw.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -8,31 +8,18 @@ html {
 
 body {
 	background: none;
-	height: 100%;
-}
-
-footer {
-	position: relative;
-	background-color: black;
-	text-align: center;
-	opacity: 0.5; 
-	color: white;
-	font-size: 24px;
-	margin: 0;
-	height: 50px;
+	height: 100vh;
 }
 
 img {
 	width: 100%;
 	height: auto;
-/*	border: 2px white solid;
-	border-radius: 15%;*/
 }
 
 table {
 	width: 100%;
 	height: 100%;
-	margin: 10% auto 10% auto;
+	margin: 7% auto 8% auto;
 	text-align: center;
 }
 
@@ -43,18 +30,18 @@ tr {
 
 h1 {
 	color: white;
-	font-size: 64px;
+	font-size: 80px;
 	font-variant: small-caps;
-	font-family: "Arial Black", Gadget, sans-serif;
+  font-weight: bold;
 	margin-bottom: 50px;
-/*	font-family: 'Luckiest Guy', cursive;
-*/	/*font-family: 'Bungee Shade', cursive;*/
-	/*font-family: 'Fredericka the Great', cursive;*/
+  font-family: 'Cabin Sketch', cursive;
+  margin-top: 0;
 }
 
 h4 {
 	color: white;
-	font-weight: bold;
+	font-family: 'Cabin', sans-serif;
+  line-height: normal;
 }
 
 h5 {
@@ -66,9 +53,19 @@ h5 {
 	text-decoration: none;
 	font-size: 36px;
 	font-variant: small-caps;
-	font-family: "Arial Black", Gadget, sans-serif;
+	font-family: 'Cabin Sketch', cursive;
+  font-weight: bold;
 	border: 2px solid white;
 	padding: 10px 20px;
+  box-shadow: 5px 5px 5px #a2a2a2;
+}
+
+.mainCell a:hover {
+  color: #1038b3;
+  cursor:pointer;
+  box-shadow: 5px 5px 5px #1038b3;
+  -webkit-animation: pulsate 2s ease-out;
+  -webkit-animation-iteration-count: infinite;
 }
 
 .container-fluid {
@@ -128,9 +125,21 @@ h5 {
 }
 
 #footer {
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	text-align: center;
+  display: flex;
+  align-content: stretch;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  text-align: right;
+}
+
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
 }
