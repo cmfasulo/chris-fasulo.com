@@ -1,7 +1,113 @@
 * {
   padding: 0;
   margin: 0;
+  color: #fff;
 }
+
+h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 8em;
+  line-height: 1.15em;
+  text-align: right;
+  position: absolute;
+  right: 20%;
+}
+
+h2 {
+  font-family: 'Poiret One', cursive;
+  font-size: 4em;
+  line-height: 0.8em;
+  text-align: center;
+  order: 0;
+  flex-grow: 1;
+  min-width: 100%;
+  margin-bottom: 60px;
+}
+
+h4 {
+  flex: 0 1 70%;
+}
+
+h4, h6 {
+  font-family: 'Raleway', sans-serif;
+}
+
+h6 {
+  position: absolute;
+  right: 20%;
+}
+
+footer {
+  position: relative;
+  background-color: #2290f5;
+  height: 10em;
+  padding: 2% 0;
+}
+
+footer h6 {
+  bottom: 5%;
+}
+
+#about, #skills, #resume, #projects, #contact {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10% 20%;
+}
+
+#top {
+  position: relative;
+  background-color: #2290f5;
+  height: 600px;
+}
+
+#top h1 {
+  top: 10%;
+}
+
+#top h2 {
+  position: absolute;
+  text-decoration: none;
+  text-align: left;
+  bottom: 10%;
+  left: 20%;
+  margin: 0;
+}
+
+#background {
+  background: url('../images/blueprint-bw.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#about {
+  background-color: rgba(8, 13, 52, 0.80);
+}
+
+#me {
+  max-width: 25%;
+  flex: 0 1 0;
+}
+
+#skills {
+  background-color: #22f564;
+}
+
+#resume {
+  background-color: #f5ad22;
+}
+
+#projects {
+  background-color: #de22f5;
+}
+
+#contact {
+  background-color: #fc5f5f;
+}
+
 /* The side navigation menu */
 #mySideNav {
     height: 100%; /* 100% Full-height */
@@ -22,7 +128,6 @@
     padding: 8px 8px 8px 8px;
     text-decoration: none;
     font-size: 25px;
-    color: #fff;
     display: block;
     transition: 0.3s;
 }
@@ -33,41 +138,31 @@
 }
 
 /* Position and style the close button (top right corner) */
-#mySideNav .openNav {
-    position: absolute;
-    top: 0;
-    padding: 0;
-    font-size: 36px;
-    transform: rotate(1080deg);
-    transition: transform 0.3s linear;
-}
-
-#mySideNav .closeNav {
-    position: absolute;
-    top: 0;
-    padding: 0;
-    font-size: 36px;
-    transform: rotate(540deg);
-    transition: transform 0.3s linear;
+#navArrow {
+  position: absolute;
+  top: 0;
+  padding: 0;
+  font-size: 36px;
 }
 
 #main {
     transition: margin-right .5s;
-    margin-right: 75px;
-}
-
-#top {
-  background-color: #2290f5;
-  height: 300px;
+    margin-right: 70px;
 }
 
 .navHide {
   display: none;
 }
 
-/*.navSection {
-  float: left;
-}*/
+.openNav {
+    transform: rotate(1080deg);
+    transition: transform 0.3s linear;
+}
+
+.closeNav {
+    transform: rotate(540deg);
+    transition: transform 0.3s linear;
+}
 
 @media screen and (max-height: 450px) {
     .sideNav {padding-top: 15px;}
