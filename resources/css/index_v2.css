@@ -25,6 +25,8 @@ h2 {
 
 h4 {
   flex: 0 1 70%;
+  font-size: 1.5em;
+  line-height: 1.25em;
 }
 
 h4, h6 {
@@ -103,6 +105,19 @@ footer h6 {
 
 #skills {
   background-color: #22f564;
+}
+
+#skills div {
+  flex: 0 0 33%;
+  max-width: 200px;
+  max-height: 200px;
+  margin: 20px;
+  text-align: center;
+}
+
+#skills img {
+  max-height: 200px;
+  max-width: 200px;
 }
 
 #resume {
