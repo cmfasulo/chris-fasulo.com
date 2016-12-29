@@ -1,7 +1,6 @@
 * {
   padding: 0;
   margin: 0;
-  color: #fff;
 }
 
 h1 {
@@ -46,6 +45,16 @@ footer {
 
 footer h6 {
   bottom: 5%;
+}
+
+#main {
+  transition: margin-right .5s;
+  margin-right: 70px;
+  overflow-x: hidden;
+}
+
+#top, #about, #skills, #resume, #projects, #contact, footer {
+  color: #fff;
 }
 
 #about, #skills, #resume, #projects, #contact {
@@ -107,64 +116,113 @@ footer h6 {
 #contact {
   background-color: #fc5f5f;
 }
+/*NAVIGATION__________________________________________________________________*/
+#navIcons, #navExpanded {
+  color: #2290f5;
+  font-family: 'Poiret One', cursive;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
 
-/* The side navigation menu */
-#mySideNav {
+#navIcons {
     height: 100%; /* 100% Full-height */
     width: 72px; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 0;
     right: 0;
-    background-color: #2d3b60;
+    background-color: #fff;
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
+    /*padding-top: 60px; /* Place content 60px from the top */*/
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-    text-align: right;
+    /*text-align: center;*/
 }
 
 /* The navigation menu links */
-#mySideNav a {
-    padding: 8px 8px 8px 8px;
-    text-decoration: none;
-    font-size: 25px;
-    display: block;
-    transition: 0.3s;
+div a, div p {
+  color: inherit;
+  flex: 1;
+  align-self: center;
+  padding: 0 8px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+div a {
+  font-size: 4vh;
+}
+
+div p {
+  font-size: 6vh;
 }
 
 /* When you mouse over the navigation links, change their color */
-#mySideNav a:hover, .offcanvas a:focus{
+div a:hover, .offcanvas a:focus{
     color: #f1f1f1;
 }
 
-/* Position and style the close button (top right corner) */
-#navArrow {
-  position: absolute;
-  top: 0;
-  padding: 0;
-  font-size: 36px;
+div a::after {
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
-#main {
-    transition: margin-right .5s;
-    margin-right: 70px;
+/* Position and style the close button (top right corner) */
+.navArrow {
+  /*position: relative;
+  top: 0;
+  padding: 0;*/
+  font-size: 36px;
+  align-self: stretch;
+  border-bottom: 2px solid #2290f5;
+}
+
+#navExpanded {
+    height: 100%; /* 100% Full-height */
+    width: 144px; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 72px;
+    background-color: #fff;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    /*padding-top: 60px; /* Place content 60px from the top */*/
+    /*transition: width 0.5s; /* 0.5 second transition effect to slide in the sidenav */*/
 }
 
 .navHide {
-  display: none;
+  transition: width 0.5s;
+  width: 0 !important;
+}
+
+.navShow {
+  transition: width 0.5s;
+  text-align: center;
+  /*border-top: 2px solid #2290f5;*/
 }
 
 .openNav {
-    transform: rotate(1080deg);
+    transform: rotate(720deg);
     transition: transform 0.3s linear;
 }
 
 .closeNav {
-    transform: rotate(540deg);
+    transform: rotate(360deg);
     transition: transform 0.3s linear;
 }
 
-@media screen and (max-height: 450px) {
+.mainAdjust {
+  margin-right: 214px !important;
+}
+
+.active {
+  color: #22f564;
+}
+/*@media screen and (max-height: 450px) {
     .sideNav {padding-top: 15px;}
     .sideNav a {font-size: 18px;}
-}
+}*/
