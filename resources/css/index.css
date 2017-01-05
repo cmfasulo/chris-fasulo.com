@@ -1,4 +1,92 @@
-html {
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 8em;
+  line-height: 1.15em;
+  text-align: right;
+  position: absolute;
+  right: 20%;
+}
+
+h2 {
+  font-family: 'Poiret One', cursive;
+  font-size: 4em;
+  line-height: 0.8em;
+  text-align: center;
+  order: 0;
+  flex-grow: 1;
+  min-width: 100%;
+  margin-bottom: 60px;
+}
+
+h4 {
+  flex: 0 1 70%;
+  font-size: 1.25vw;
+  line-height: 2vw;
+}
+
+h4, h6 {
+  font-family: 'Raleway', sans-serif;
+}
+
+h6 {
+  position: absolute;
+  right: 20%;
+}
+
+footer {
+  position: relative;
+  background-color: #2290f5;
+  height: 10em;
+  padding: 2% 0;
+}
+
+footer h6 {
+  bottom: 5%;
+}
+
+#main {
+  transition: margin-right .5s;
+  margin-right: 70px;
+  overflow-x: hidden;
+}
+
+#top, #about, #skills, #resume, #projects, #contact, footer {
+  color: #fff;
+}
+
+#about, #skills, #resume, #projects, #contact {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10% 20%;
+}
+
+#top {
+  position: relative;
+  background-color: #2290f5;
+  height: 600px;
+}
+
+#top h1 {
+  top: 10%;
+}
+
+#top h2 {
+  position: absolute;
+  text-decoration: none;
+  text-align: left;
+  bottom: 10%;
+  left: 20%;
+  margin: 0;
+}
+
+#background {
   background: url('../images/blueprint-bw.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -6,140 +94,157 @@ html {
   background-size: cover;
 }
 
-body {
-	background: none;
-	height: 100vh;
-}
-
-img {
-	width: 100%;
-	height: auto;
-}
-
-table {
-	width: 100%;
-	height: 100%;
-	margin: 7% auto 8% auto;
-	text-align: center;
-}
-
-tr {
-	width: 100%;
-	height: 100%;
-}
-
-h1 {
-	color: white;
-	font-size: 80px;
-	font-variant: small-caps;
-  font-weight: bold;
-	margin-bottom: 50px;
-  font-family: 'Cabin Sketch', cursive;
-  margin-top: 0;
-}
-
-h4 {
-	color: white;
-	font-family: 'Cabin', sans-serif;
-  line-height: normal;
-}
-
-h5 {
-	color: white;
-}
-
-.mainCell a {
-	color: white;
-	text-decoration: none;
-	font-size: 36px;
-	font-variant: small-caps;
-	font-family: 'Cabin Sketch', cursive;
-  font-weight: bold;
-	border: 2px solid white;
-	padding: 10px 20px;
-  box-shadow: 5px 5px 5px #a2a2a2;
-}
-
-.mainCell a:hover {
-  color: #1038b3;
-  cursor:pointer;
-  box-shadow: 5px 5px 5px #1038b3;
-  -webkit-animation: pulsate 2s ease-out;
-  -webkit-animation-iteration-count: infinite;
-}
-
-.container-fluid {
-	padding: 0;
-}
-
-.navbar-nav {
-	float: right;
-}
-
-.navbar-collapse {
-	padding-left: 0;
-	padding-right: 0;
-}
-
-.row {
-	display: block;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-}
-
-.alignRight {
-	float: right;
-}
-
-.mainCell {
-	width: 33.33%;
-	float: left;
-}
-
-#content {
-	background-color: rgba(0,0,0,0.5);
-	border: 5px white solid;
-	margin-top: 5%;
-	margin-bottom: 5%;
-}
-
-#mepic {
-	display: inline-block;
-	max-width: 25%;
-	margin-left: 5%;
-	margin-right: 5%;
-}
-
 #about {
-	display: inline-block;
-	width: 600px;
-	text-align: left;
+  background-color: rgba(8, 13, 52, 0.80);
 }
 
-#mainCellRow {
-	width: 100%;
-	float: left;
-	clear: both;
-	margin: 10% auto 0 auto;
+#me {
+  max-width: 25%;
+  flex: 0 1 0;
 }
 
-#footer {
+#skills {
+  background-color: #22f564;
+}
+
+#skills div {
+  flex: 0 0 33%;
+  max-width: 200px;
+  max-height: 200px;
+  margin: 20px;
+  text-align: center;
+}
+
+#skills img {
+  max-height: 200px;
+  max-width: 200px;
+}
+
+#resume {
+  background-color: #f5ad22;
+}
+
+#projects {
+  background-color: #de22f5;
+}
+
+.project {
+  flex: 1 0 25%;
+  min-height: 200px;
+  background-color: white;
+  margin: 20px;
+}
+
+#contact {
+  background-color: #fc5f5f;
+}
+/*NAVIGATION__________________________________________________________________*/
+#navIcons, #navExpanded {
+  color: #2290f5;
+  font-family: 'Poiret One', cursive;
   display: flex;
-  align-content: stretch;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#navIcons {
+    height: 100%; /* 100% Full-height */
+    width: 72px; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    /*padding-top: 60px; /* Place content 60px from the top */*/
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    /*text-align: center;*/
+}
+
+/* The navigation menu links */
+div a, div p {
+  color: inherit;
+  flex: 1;
+  align-self: center;
+  padding: 0 8px;
+  text-decoration: none;
+  display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.5;
-  width: 100%;
-  height: 100px;
-  bottom: 0;
-  left: 0;
-  background-color: black;
-  text-align: right;
+  transition: 0.3s;
 }
 
-@-webkit-keyframes pulsate {
-    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
-    50% {opacity: 1.0;}
-    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+div a {
+  font-size: 4vh;
 }
+
+div p {
+  font-size: 6vh;
+}
+
+/* When you mouse over the navigation links, change their color */
+div a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+div a::after {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+/* Position and style the close button (top right corner) */
+.navArrow {
+  /*position: relative;
+  top: 0;
+  padding: 0;*/
+  font-size: 36px;
+  align-self: stretch;
+  border-bottom: 2px solid #2290f5;
+}
+
+#navExpanded {
+    height: 100%; /* 100% Full-height */
+    width: 144px; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 72px;
+    background-color: #fff;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    /*padding-top: 60px; /* Place content 60px from the top */*/
+    /*transition: width 0.5s; /* 0.5 second transition effect to slide in the sidenav */*/
+}
+
+.navHide {
+  transition: width 0.5s;
+  width: 0 !important;
+}
+
+.navShow {
+  transition: width 0.5s;
+  text-align: center;
+  /*border-top: 2px solid #2290f5;*/
+}
+
+.openNav {
+    transform: rotate(720deg);
+    transition: transform 0.3s linear;
+}
+
+.closeNav {
+    transform: rotate(360deg);
+    transition: transform 0.3s linear;
+}
+
+.mainAdjust {
+  margin-right: 214px !important;
+}
+
+.active {
+  color: #22f564;
+}
+/*@media screen and (max-height: 450px) {
+    .sideNav {padding-top: 15px;}
+    .sideNav a {font-size: 18px;}
+}*/
