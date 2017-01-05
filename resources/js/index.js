@@ -1,4 +1,10 @@
 $(document).ready(function() {
+  navHighlight();
+
+  $(document).scroll(function () {
+    navHighlight();
+  });
+
   $(".navArrow").click(function(){
     $("#main").toggleClass("mainAdjust");
     $("#navExpanded").toggleClass("navHide");
@@ -7,7 +13,9 @@ $(document).ready(function() {
     $("#menu").toggleClass("closeNav");
   });
 
-  $(document).scroll(function() {
+});
+
+function navHighlight() {
     var y = $(document).scrollTop();
     var top = $("#top").position().top;
     var about = $("#about").position().top;
@@ -23,41 +31,40 @@ $(document).ready(function() {
       $(".resume").removeClass("active");
       $(".projects").removeClass("active");
       $(".contact").removeClass("active");
-    } else if (y > about && y < skills) {
+    } else if (y >= about && y < skills) {
+      $(".top").addClass("active");
       $(".about").addClass("active");
       $(".skills").removeClass("active");
       $(".resume").removeClass("active");
       $(".projects").removeClass("active");
       $(".contact").removeClass("active");
-    } else if (y > skills && y < resume) {
+    } else if (y >= skills && y < resume) {
+      $(".top").addClass("active");
+      $(".about").addClass("active");
       $(".skills").addClass("active");
       $(".resume").removeClass("active");
       $(".projects").removeClass("active");
       $(".contact").removeClass("active");
-    } else if (y > resume && y < projects) {
+    } else if (y >= resume && y < projects) {
+      $(".top").addClass("active");
+      $(".about").addClass("active");
+      $(".skills").addClass("active");
       $(".resume").addClass("active");
       $(".projects").removeClass("active");
       $(".contact").removeClass("active");
-    } else if (y > projects && y < contact) {
+    } else if (y >= projects && y < contact) {
+      $(".top").addClass("active");
+      $(".about").addClass("active");
+      $(".skills").addClass("active");
+      $(".resume").addClass("active");
       $(".projects").addClass("active");
       $(".contact").removeClass("active");
     } else {
+      $(".top").addClass("active");
+      $(".about").addClass("active");
+      $(".skills").addClass("active");
+      $(".resume").addClass("active");
+      $(".projects").addClass("active");
       $(".contact").addClass("active");
     }
-  });
-
-});
-
-/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
-// function toggleNav() {
-//   if (document.getElementById("mySideNav").style.width === "240px"
-//       && document.getElementById("main").style.marginRight === "240px") {
-//       document.getElementById("mySideNav").style.width = "72px";
-//       document.getElementById("main").style.marginRight = "72px";
-//       document.getElementById("navArrow").className = "openNav";
-//   } else {
-//       document.getElementById("mySideNav").style.width = "240px";
-//       document.getElementById("main").style.marginRight = "240px";
-//       document.getElementById("navArrow").className = "closeNav";
-//     }
-// }
+};
