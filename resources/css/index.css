@@ -1,3 +1,9 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -67,16 +73,15 @@ footer h6 {
   padding: 10% 20%;
 }
 
+/*TOP HEADER SECTION*/
 #top {
   position: relative;
   background-color: #2290f5;
   height: 600px;
 }
-
 #top h1 {
   top: 10%;
 }
-
 #top h2 {
   position: absolute;
   text-decoration: none;
@@ -86,6 +91,7 @@ footer h6 {
   margin: 0;
 }
 
+/*ABOUT ME SECTION*/
 #background {
   background: url('../images/blueprint-bw.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -93,20 +99,18 @@ footer h6 {
   -o-background-size: cover;
   background-size: cover;
 }
-
 #about {
   background-color: rgba(8, 13, 52, 0.80);
 }
-
 #me {
   max-width: 25%;
   flex: 0 1 0;
 }
 
+/*SKILLS SECTION*/
 #skills {
   background-color: #22f564;
 }
-
 #skills div {
   flex: 0 0 33%;
   max-width: 200px;
@@ -114,31 +118,68 @@ footer h6 {
   margin: 20px;
   text-align: center;
 }
-
 #skills img {
   max-height: 200px;
   max-width: 200px;
 }
 
+/*RESUME SECTION*/
 #resume {
   background-color: #f5ad22;
 }
 
+/*PROJECTS SECTION*/
 #projects {
   background-color: #de22f5;
 }
-
-.project {
+#projects div {
   flex: 1 0 25%;
   min-height: 200px;
-  background-color: white;
+  background-color: #6f1979;
   margin: 20px;
 }
 
+/*CONTACT SECTION*/
 #contact {
   background-color: #fc5f5f;
+  text-align: center;
+  transform: translatez(0);
 }
-/*NAVIGATION__________________________________________________________________*/
+
+#contact a {
+  width: 120px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  margin: 20px;
+}
+#contact a div {
+  flex: 0 0 auto;
+  width: 120px;
+  height: 120px;
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 120px;
+  background-color: #ac1212;
+  transition: all 0.5s ease;
+}
+#contact a div:hover {
+  transform: rotate(360deg);
+  border-radius: 100px;
+}
+#contact div h4 {
+  width: 120px;
+  height: 20px;
+  display: block;
+  padding: 15px 0px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/*NAVIGATION SIDE BAR*/
 #navIcons, #navExpanded {
   color: #2290f5;
   font-family: 'Poiret One', cursive;
@@ -149,17 +190,15 @@ footer h6 {
 }
 
 #navIcons {
-    height: 100%; /* 100% Full-height */
-    width: 72px; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    height: 100%;
+    width: 72px;
+    position: fixed;
+    z-index: 1;
     top: 0;
     right: 0;
     background-color: #fff;
-    overflow-x: hidden; /* Disable horizontal scroll */
-    /*padding-top: 60px; /* Place content 60px from the top */*/
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-    /*text-align: center;*/
+    overflow-x: hidden;
+    transition: 0.5s;
 }
 
 /* The navigation menu links */
@@ -183,7 +222,6 @@ div p {
   font-size: 6vh;
 }
 
-/* When you mouse over the navigation links, change their color */
 div a:hover, .offcanvas a:focus{
     color: #f1f1f1;
 }
@@ -193,27 +231,21 @@ div a::after {
   margin-bottom: 0;
 }
 
-/* Position and style the close button (top right corner) */
 .navArrow {
-  /*position: relative;
-  top: 0;
-  padding: 0;*/
   font-size: 36px;
   align-self: stretch;
   border-bottom: 2px solid #2290f5;
 }
 
 #navExpanded {
-    height: 100%; /* 100% Full-height */
-    width: 144px; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    height: 100%;
+    width: 144px;
+    position: fixed;
+    z-index: 1;
     top: 0;
     right: 72px;
     background-color: #fff;
-    overflow-x: hidden; /* Disable horizontal scroll */
-    /*padding-top: 60px; /* Place content 60px from the top */*/
-    /*transition: width 0.5s; /* 0.5 second transition effect to slide in the sidenav */*/
+    overflow-x: hidden;
 }
 
 .navHide {
@@ -224,7 +256,6 @@ div a::after {
 .navShow {
   transition: width 0.5s;
   text-align: center;
-  /*border-top: 2px solid #2290f5;*/
 }
 
 .openNav {
@@ -244,7 +275,3 @@ div a::after {
 .active {
   color: #22f564;
 }
-/*@media screen and (max-height: 450px) {
-    .sideNav {padding-top: 15px;}
-    .sideNav a {font-size: 18px;}
-}*/
