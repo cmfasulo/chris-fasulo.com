@@ -1,5 +1,6 @@
 $(document).ready(function() {
   navHighlight();
+  $('#backtop').hide();
 
   $(document).scroll(function () {
     navHighlight();
@@ -9,8 +10,8 @@ $(document).ready(function() {
     $("#main").toggleClass("mainAdjust");
     $("#navExpanded").toggleClass("navHide");
     $("#navExpanded").toggleClass("navShow");
-    $("#menu").toggleClass("openNav");
-    $("#menu").toggleClass("closeNav");
+    $("#menu").toggleClass("navOpen");
+    $("#menu").toggleClass("navClose");
   });
 
 });
@@ -66,5 +67,11 @@ function navHighlight() {
       $(".resume").addClass("active");
       $(".projects").addClass("active");
       $(".contact").addClass("active");
+    }
+
+    if ($(this).scrollTop() >= about) {
+      $('#backtop').fadeIn(200);
+    } else {
+      $('#backtop').fadeOut(200);
     }
 };

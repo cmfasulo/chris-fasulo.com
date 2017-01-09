@@ -1,5 +1,4 @@
 @import url(http://weloveiconfonts.com/api/?family=entypo);
-/* entypo */
 [class*="entypo-"]:before {
   font-family: 'entypo', sans-serif;
 }
@@ -8,7 +7,6 @@
   padding: 0;
   margin: 0;
 }
-
 h1 {
   font-family: 'Anton', sans-serif;
   font-size: 8em;
@@ -17,9 +15,10 @@ h1 {
   position: absolute;
   right: 20%;
 }
-
-h2 {
+h2, h3 {
   font-family: 'Poiret One', cursive;
+}
+h2 {
   font-size: 4em;
   line-height: 0.8em;
   text-align: center;
@@ -28,30 +27,26 @@ h2 {
   min-width: 100%;
   margin-bottom: 60px;
 }
-
-h4 {
-  flex: 0 1 70%;
-  font-size: 1.25vw;
-  line-height: 2vw;
+h3 {
+  text-align: center;
+  font-size: 2.25vw;
+  line-height: 2.25vw;
+  margin-bottom: 1vw;
 }
-
-h4, h6 {
+h5, p, li {
   font-family: 'Raleway', sans-serif;
+  font-size: 1.25vw;
+  line-height: 1.75vw;
 }
-
-h6 {
-  position: absolute;
-  right: 20%;
-}
-
 footer {
   position: relative;
   background-color: #2290f5;
   height: 10em;
   padding: 2% 0;
 }
-
-footer h6 {
+footer p {
+  position: absolute;
+  right: 20%;
   bottom: 5%;
 }
 
@@ -60,11 +55,9 @@ footer h6 {
   margin-right: 70px;
   overflow-x: hidden;
 }
-
 #top, #about, #skills, #resume, #projects, #contact, footer {
   color: #fff;
 }
-
 #about, #skills, #resume, #projects, #contact {
   display: flex;
   flex-flow: row wrap;
@@ -102,6 +95,9 @@ footer h6 {
 #about {
   background-color: rgba(8, 13, 52, 0.80);
 }
+#about div {
+  flex: 0 1 70%;
+}
 #me {
   max-width: 25%;
   flex: 0 1 0;
@@ -126,6 +122,49 @@ footer h6 {
 /*RESUME SECTION*/
 #resume {
   background-color: #f5ad22;
+  align-items: flex-start;
+}
+#resume div {
+  margin: 1.25em;
+}
+#resume a {
+  color: #fff;
+}
+#resume span {
+  font-style: italic;
+}
+#resume ul {
+  list-style: square;
+  /*list-style-position: inside;*/
+  list-style-position: outside;
+  margin-left: 1em;
+}
+#toolbox span {
+  text-decoration: underline;
+}
+#summary {
+  order: 0;
+}
+#toolbox {
+  order: 2;
+}
+#summary, #toolbox {
+  flex: 1 0 45%;
+  /*text-align: justify;*/
+}
+#experience {
+  order: 3;
+  flex: 1 0 100%;
+}
+#experience a, #experience h5 {
+  margin-left: -1em;
+}
+#experience > ul {
+  list-style: none;
+  margin-top: 1em;
+}
+#experience > ul > li {
+  margin-top: 1em;
 }
 
 /*PROJECTS SECTION*/
@@ -145,7 +184,6 @@ footer h6 {
   text-align: center;
   transform: translatez(0);
 }
-
 #contact a {
   width: 120px;
   height: 140px;
@@ -154,6 +192,8 @@ footer h6 {
   align-items: center;
   flex-flow: column;
   margin: 20px;
+  text-decoration: none;
+  color: #fff;
 }
 #contact a div {
   flex: 0 0 auto;
@@ -170,108 +210,11 @@ footer h6 {
   transform: rotate(360deg);
   border-radius: 100px;
 }
-#contact div h4 {
+#contact div p {
   width: 120px;
   height: 20px;
   display: block;
   padding: 15px 0px;
   font-size: 1.2em;
   text-align: center;
-}
-
-/*NAVIGATION SIDE BAR*/
-#navIcons, #navExpanded {
-  color: #2290f5;
-  font-family: 'Poiret One', cursive;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#navIcons {
-    height: 100%;
-    width: 72px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: #fff;
-    overflow-x: hidden;
-    transition: 0.5s;
-}
-
-/* The navigation menu links */
-div a, div p {
-  color: inherit;
-  flex: 1;
-  align-self: center;
-  padding: 0 8px;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s;
-}
-
-div a {
-  font-size: 4vh;
-}
-
-div p {
-  font-size: 6vh;
-}
-
-div a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
-}
-
-div a::after {
-  padding-bottom: 0;
-  margin-bottom: 0;
-}
-
-.navArrow {
-  font-size: 36px;
-  align-self: stretch;
-  border-bottom: 2px solid #2290f5;
-}
-
-#navExpanded {
-    height: 100%;
-    width: 144px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 72px;
-    background-color: #fff;
-    overflow-x: hidden;
-}
-
-.navHide {
-  transition: width 0.5s;
-  width: 0 !important;
-}
-
-.navShow {
-  transition: width 0.5s;
-  text-align: center;
-}
-
-.openNav {
-    transform: rotate(720deg);
-    transition: transform 0.3s linear;
-}
-
-.closeNav {
-    transform: rotate(360deg);
-    transition: transform 0.3s linear;
-}
-
-.mainAdjust {
-  margin-right: 214px !important;
-}
-
-.active {
-  color: #22f564;
 }
