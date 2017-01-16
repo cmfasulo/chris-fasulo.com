@@ -122,16 +122,17 @@ footer p {
 /*RESUME SECTION*/
 #resume {
   background-color: #f5ad22;
-  align-items: flex-start;
+  /*align-items: flex-start;*/
+  align-items: stretch;
+  justify-content: space-between;
 }
 #resume div {
-  margin: 1.25em;
+  padding: 1.25em;
+  background-color: #db9b22;
 }
 #resume a {
   color: #fff;
-}
-#resume span {
-  font-style: italic;
+  transition: all .2s ease-in-out;
 }
 #resume ul {
   list-style: square;
@@ -149,12 +150,17 @@ footer p {
   order: 2;
 }
 #summary, #toolbox {
-  flex: 1 0 45%;
-  /*text-align: justify;*/
+  flex: 1 0 auto;
+  min-width: 50%;
+  max-width: 100%;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
 }
 #experience {
   order: 3;
   flex: 1 0 100%;
+  border: 2px solid #fff;
 }
 #experience a, #experience h5 {
   margin-left: -1em;
@@ -170,12 +176,30 @@ footer p {
 /*PROJECTS SECTION*/
 #projects {
   background-color: #de22f5;
+  text-align: center;
+  transition: all .2s ease-in-out;
 }
-#projects div {
-  flex: 1 0 25%;
-  min-height: 200px;
-  background-color: #6f1979;
+#projects a {
+  width: 252px;
+  height: 252px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
   margin: 20px;
+  text-decoration: none;
+  color: #fff;
+  /*background-color: #6f1979;*/
+  /*transition: all .2s ease-in-out;*/
+}
+#projects a img {
+  flex: 0 0 auto;
+  width: 100%;
+  margin-bottom: 20px;
+  transition: all 0.5s ease;
+}
+#projects a img:hover {
+  transform: scale(1.1);
 }
 
 /*CONTACT SECTION*/
