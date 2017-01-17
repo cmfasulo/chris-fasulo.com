@@ -180,13 +180,14 @@ footer p {
   transition: all .2s ease-in-out;
 }
 #projects a {
-  width: 252px;
-  height: 252px;
+  /*width: 252px;
+  height: 252px;*/
+  width: 45%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column;
-  margin: 20px;
+  margin: 20px auto;
   text-decoration: none;
   color: #fff;
   /*background-color: #6f1979;*/
