@@ -2,7 +2,7 @@
 <img src="images/websiteScreenshot.png">
 <br>
 <h2>Description:</h2>
-<p>Portfolio/Resum&eacute; website build from scratch by yours truly. (still under construction, pardon the dust!)</p>
+<p>Portfolio/Resum&eacute; website adapted from the "Dimension" HTML5UP theme.</p>
 <p>Template Name: "Dimension" by HTML5 UP</p>
 
 http://chris-fasulo.com/
