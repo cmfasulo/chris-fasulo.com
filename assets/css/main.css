@@ -1630,6 +1630,10 @@
 }
 
 /* Experience */
+#resume h2 {
+	margin-bottom: 10px;
+}
+
 #resume a:hover {
 	opacity: 0.75;
 	color: #103d8b;
@@ -1672,7 +1676,7 @@
 
 #projects img {
 	width: 100%;
-	/*border: 1px solid #fff;*/
+	border: 1px solid #fff;
 	/*box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);*/
 	display: block;
 	margin: 1em auto;
@@ -1680,4 +1684,12 @@
 
 #projects h3 {
 	text-align: center;
+}
+
+#projects h5 {
+	text-align: left;
+}
+
+#projects span {
+	text-decoration: underline;
 }
